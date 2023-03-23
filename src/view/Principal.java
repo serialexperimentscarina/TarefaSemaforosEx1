@@ -2,7 +2,7 @@ package view;
 
 import java.util.concurrent.Semaphore;
 
-import controller.ThreadShow;
+import controller.ThreadBilheteria;
 
 public class Principal {
 
@@ -11,7 +11,7 @@ public class Principal {
 		Semaphore mutex = new Semaphore(1);
 		
 		for (int i = 0; i < 300; i++) {
-			Thread cliente = new ThreadShow(mutex, (i + 1));
+			Thread cliente = new ThreadBilheteria(mutex, (i + 1));
 			cliente.start();
 		}
 
