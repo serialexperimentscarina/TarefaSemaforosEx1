@@ -71,7 +71,7 @@ public class ThreadBilheteria extends Thread{
 	private void validarCompra(int numIngressos) {
 		if (numIngressos <= ingressos) {
 			ingressos -= numIngressos;
-			System.out.println("COMPRA: Cliente #" + clienteID + " realizou a compra de " + numIngressos + " ingresso(s)! " + ingressos + " ainda disponíveis.");
+			System.out.println("COMPRA: Cliente #" + clienteID + " realizou a compra de " + numIngressos + " ingresso(s)! " + ingressos + " ainda " + (ingressos > 1 ? "disponíveis." : "disponível."));
 		} else {
 			System.out.println("INDISPONIBILIDADE: Cliente #" + clienteID + " não pôde realizar sua compra, já que não há ingressos suficientes.");
 		}
